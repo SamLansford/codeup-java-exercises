@@ -10,20 +10,20 @@ public class ConsoleExercises {
 //        int userInt = sc.nextInt();
 //        System.out.println(userInt);
 
-//        System.out.print("Enter 3 words: ");
-//        String word1 = sc.next();
-//        String word2 = sc.next();
-//        String word3 = sc.next();
-//        System.out.println(word1);
-//        System.out.println(word2);
-//        System.out.println(word3);
+        System.out.print("Enter 3 words: ");
+        String word1 = sc.next();
+        String word2 = sc.next();
+        String word3 = sc.next();
+        System.out.println(word1);
+        System.out.println(word2);
+        System.out.println(word3);
 
 
 
 
-        System.out.println("Please enter a sentence");
-        String sentence = sc.nextLine();
-        System.out.println(sentence);
+//        System.out.println("Please enter a sentence");
+//        String sentence = sc.nextLine();
+//        System.out.println(sentence);
 
 
 
