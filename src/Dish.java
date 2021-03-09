@@ -1,4 +1,4 @@
-class Dish {
+public class Dish {
 
     public int costInCents;
     public String nameOfDish;
