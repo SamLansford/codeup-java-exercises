@@ -1,3 +1,4 @@
+import util.Input;
 
 public class Person {
 
@@ -31,10 +32,13 @@ public class Person {
         p1.sayHello("");
         System.out.println(p1.getName());
 
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
-//        System.out.println(person1.getName().equals(person2.getName()));
-//        System.out.println(person1 == person2);
+        Person person1 = new Person("John");
+        Person person2 = new Person("John");
+        System.out.println(person1.getName().equals(person2.getName()));
+        System.out.println(person1 == person2);
+
+
+
     }
 }
 

@@ -1,8 +1,8 @@
 import java.util.Locale;
 
-//public class DishTest {
-//    public static void main(String[] args) {
-//
+public class DishTest {
+    public static void main(String[] args) {
+
 //        Dish d1 = new Dish();
 //        d1.costInCents = 1400;
 //        d1.nameOfDish = "Caesar salad";
@@ -13,5 +13,7 @@ import java.util.Locale;
 //        DishTools.printShoutDishName(DishTools.shoutDishName(d1));
 //        DishTools.analyzeDishCost(d1);
 //        DishTools.flipRecommendation(d1);
-//    }
-//}
+
+
+    }
+}
