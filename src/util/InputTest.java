@@ -5,7 +5,7 @@ public class InputTest {
 
         Input input = new Input();
         input.yesNO();
-        input.getInt(1,5);
+        input.getInt(1,100000000);
         input.getDouble(2.5, 5.4);
     }
 }

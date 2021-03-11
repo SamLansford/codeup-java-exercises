@@ -55,7 +55,7 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Please enter a decimal number");
+//        System.out.println("Please enter a decimal number");
         if (scanner.hasNext()) {
             return scanner.nextDouble();
         } else {
