@@ -11,7 +11,5 @@ public class ServerNameGenerator {
         int randomAdj = random.nextInt(adjectives.length);
         int randomNoun = random.nextInt(nouns.length);
         System.out.println(adjectives[randomAdj] + "-" + nouns[randomNoun]);
-
     }
-
 }
