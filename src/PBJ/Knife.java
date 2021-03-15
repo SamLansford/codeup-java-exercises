@@ -2,13 +2,12 @@ package PBJ;
 
 public class Knife extends KitchenTool {
 
-    public double length;
-    public Knife() {
-        length = 15;
+    public void clean() {
+        System.out.println("Cleaning the knife");
     }
 
-    public void cut() {
-        System.out.println("Cutting");
+    public void usage() {
+        System.out.println("The usage of a knife is cutting");
     }
 
 }
