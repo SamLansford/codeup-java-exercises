@@ -13,4 +13,13 @@ public class Jelly extends Ingredient {
     public void throwAway() {
         System.out.println("Throw away jelly");
     }
+
+    @Override
+    protected int calories(int ca) {
+        return super.calories(ca);
+    }
+
+    public void printCalories(int ca) {
+        System.out.println("The calories of jelly is " + calories(ca));
+    }
 }

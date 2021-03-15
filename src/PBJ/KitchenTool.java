@@ -2,6 +2,8 @@ package PBJ;
 
 public class KitchenTool {
 
+    public boolean isClean;
+
     public void usage() {
         System.out.println("The usage of this is: ");
     }
