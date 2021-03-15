@@ -10,6 +10,6 @@ public class ServerNameGenerator {
         Random random = new Random();
         int randomAdj = random.nextInt(adjectives.length);
         int randomNoun = random.nextInt(nouns.length);
-        System.out.println(adjectives[randomAdj] + "-" + nouns[randomNoun]);
+        System.out.println("Here is your sever name: " + adjectives[randomAdj] + "-" + nouns[randomNoun]);
     }
 }
