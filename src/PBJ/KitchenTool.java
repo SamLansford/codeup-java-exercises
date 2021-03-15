@@ -9,5 +9,9 @@ public class KitchenTool {
     public void clean() {
         System.out.println("Cleaning dishes");
     }
+
+    public void shape() {
+        System.out.println("The shape of this is");
+    }
 }
 

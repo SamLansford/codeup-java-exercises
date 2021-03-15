@@ -9,4 +9,8 @@ public class Plate extends KitchenTool {
     public void clean() {
         System.out.println("Cleaning the plate");
     }
+
+    public void shape() {
+        System.out.println("The shape of the plate is circle");
+    }
 }
