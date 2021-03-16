@@ -9,8 +9,9 @@ public class CircleApp {
         System.out.println("Please enter the radius of a circle");
         double radius = input.getDouble();
         Circle circle = new Circle(radius);
+        Rectangle rectangle = new Rectangle(2,5);
+        System.out.println(rectangle);
         System.out.println(circle.getArea());
         System.out.println(circle.getCircumference());
     }
-
 }
