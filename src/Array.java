@@ -22,9 +22,7 @@ public class Array {
         username.put("Billy", "bob");
         username.put("John","brown");
         System.out.println(username);
-        username.get("Sam");
-        System.out.println(username);
-        username.getOrDefault("Ryan","Something");
-        System.out.println(username);
+        System.out.println(username.get("Sam"));
+        System.out.println(username.getOrDefault("Ryan", "Something"));
     }
 }

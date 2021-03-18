@@ -67,7 +67,6 @@ public class Input {
     public double getDouble(double min, double max) {
         double userInput = getDouble();
         if (userInput >= min && userInput <= max) {
-            System.out.println("That's the right number");
             return userInput;
         } else {
             System.out.println("Please enter a decimal number between " + min + " and " + max);
