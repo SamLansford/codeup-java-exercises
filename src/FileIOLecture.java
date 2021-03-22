@@ -8,43 +8,43 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FileIOLecture {
-        public static void main(String[] args) {
-            // ============================ PATH
-            Path fileLecturePath = Paths.get("src", "fileIoLecture", "FileIOLecture.java");
-            System.out.println(fileLecturePath);
-            System.out.println(fileLecturePath.toAbsolutePath());
-        Path otherPath = Paths.get("src", "../", "src", "../", "src", "fileIoLecture", "FileIOLecture");
+    public static void main(String[] args) {
+        // ============================ PATH
+        Path fileLecturePath = Paths.get("src", "FileIOLecture.java");
+        System.out.println(fileLecturePath);
+        System.out.println(fileLecturePath.toAbsolutePath());
+        Path otherPath = Paths.get("src", "../", "src", "../", "src", "FileIOLecture");
         System.out.println(otherPath);
         System.out.println(otherPath.normalize());
         System.out.println(otherPath.toAbsolutePath());
         System.out.println(otherPath.normalize().toAbsolutePath());
 //             ============================ FILE METHODS
-        System.out.println(Files.exists(fileLecturePath));
-        System.out.println(Files.exists(Paths.get("bob.txt")));
-
-        String directory = "data";
-        String filename = "info.txt";
-        Path dataDirectory = Paths.get(directory);
-        Path dataFile = Paths.get(directory, filename);
+//        System.out.println(Files.exists(fileLecturePath));
+//        System.out.println(Files.exists(Paths.get("bob.txt")));
 //
-        System.out.println(dataDirectory);
-        System.out.println(dataFile);
-
-        if (!Files.exists(dataDirectory)) {
-            try {
-                Files.createDirectories(dataDirectory);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (!Files.exists(dataFile)) {
-            try {
-                Files.createFile(dataFile);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+//        String directory = "data";
+//        String filename = "info.txt";
+//        Path dataDirectory = Paths.get(directory);
+//        Path dataFile = Paths.get(directory, filename);
+////
+//        System.out.println(dataDirectory);
+//        System.out.println(dataFile);
+//
+//        if (Files.notExists(dataDirectory)) {
+//            try {
+//                Files.createDirectories(dataDirectory);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        if (Files.notExists(dataFile)) {
+//            try {
+//                Files.createFile(dataFile);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
 //             ============================ READING FILES
 //        Path p = Paths.get("src/fileIoLecture/test.txt");
 //
@@ -73,7 +73,7 @@ public class FileIOLecture {
 //            e.printStackTrace();
 //        }
 //             ============================ WRITING FILES
-        Path p = Paths.get("src/fileIoLecture/test.txt");
+        Path p = Paths.get("data","info.txt");
 
         List<String> newNames = Arrays.asList("John", "Fred", "Cathy");
         try {
@@ -90,5 +90,8 @@ public class FileIOLecture {
         } catch(IOException e) {
             e.printStackTrace();
         }
-        }
     }
+}
+
+
+
