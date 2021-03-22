@@ -21,24 +21,13 @@ public class Input {
     }
 
 
-
-//    public int getInt(String prompt) {
-//        System.out.println(prompt);
-//        Scanner sc = new Scanner(System.in);
-//        while (!sc.hasNext()) {
-//            System.out.println("Please enter a whole number");
-//            sc.nextInt();
-//        }
-//        return sc.nextInt();
-//
-//    }
-
     public int getInt() {
-        System.out.println("Please enter a whole number");
-        if (scanner.hasNext()) {
-            return scanner.nextInt();
-        } else {
-            scanner.nextLine();
+
+        try{
+           return Integer.parseInt(getString());
+        }catch (NumberFormatException e) {
+            System.out.printf("Input could not be parsed into an integer. %s\n", e.getMessage());
+            System.out.println("Try again");
             return getInt();
         }
     }
@@ -55,13 +44,15 @@ public class Input {
     }
 
     public double getDouble() {
-//        System.out.println("Please enter a decimal number");
-        if (scanner.hasNext()) {
-            return scanner.nextDouble();
-        } else {
-            scanner.nextLine();
+
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e) {
+            System.out.printf("Input could not parsed into an double. %s\n", e.getMessage());
+            System.out.println("Please try again");
             return getDouble();
         }
+
     }
 
     public double getDouble(double min, double max) {
