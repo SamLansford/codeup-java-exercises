@@ -14,13 +14,6 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public boolean yesNO() {
-        System.out.println("Please type something");
-        String userInput = scanner.nextLine();
-        return (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y"));
-    }
-
-
     public int getInt() {
 
         try{
@@ -65,4 +58,9 @@ public class Input {
         return getDouble(min, max);
     }
 
+    public boolean yesNo() {
+        System.out.println("Please type something");
+        String userInput = scanner.nextLine();
+        return (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y"));
+    }
 }
