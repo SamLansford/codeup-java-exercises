@@ -10,6 +10,7 @@ public class ArraysExercises {
         peoples[0] = new Person("Sam");
         peoples[1] = new Person("John");
         peoples[2] = new Person("Jeff");
+        peoples[3] = new Person("Jay");
 
         for (Person people : peoples) {
             System.out.println(people.getName());
