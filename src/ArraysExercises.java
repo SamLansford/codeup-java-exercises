@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class ArraysExercises {
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
+        int[] numbers = {1, 2, 3, 4, 5, 6};
         System.out.println(Arrays.toString(numbers));
 
         Person[] peoples = new Person[3];
@@ -12,6 +12,7 @@ public class ArraysExercises {
         peoples[2] = new Person("Jeff");
         peoples[3] = new Person("Jay");
         peoples[4] = new Person("bob");
+        peoples[5] = new Person("kate");
 
         for (Person people : peoples) {
             System.out.println(people.getName());
