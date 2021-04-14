@@ -8,6 +8,7 @@ public class JavaIIIWarmUp {
         System.out.println(sameFirstAndLast("refrigerator"));
         System.out.println(sameFirstAndLast("q2kdj3vq"));
         System.out.println(sameFirstAndLast("radar"));
+        System.out.println(sameFirstAndLast("kate"));
     }
 
     public static boolean sameFirstAndLast(String input) {
