@@ -4,16 +4,39 @@ import java.util.Scanner;
 public class JavaIIIWarmUp {
 
     public static void main(String[] args) {
-        int[] myArray = new int[100];
-        for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = (int) (Math.random() * (50 - 1)) + 1;
+//        int[] myArray = new int[100];
+//        for (int i = 0; i < myArray.length; i++) {
+//            myArray[i] = (int) (Math.random() * (50 - 1)) + 1;
+//        }
+//        System.out.println("The average is: " + average(myArray));
+//        System.out.println("The maxium number is: " + maximum(myArray));
+//        System.out.println("The range of all the number is: " + range(myArray));
+//        System.out.println("The mode of of all the number is: " + mode(myArray));
+//        System.out.println("The histogram: ");
+//        histogram(myArray);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a sentence to convert to camel case");
+        String userInput = sc.nextLine();
+        sc.close();
+        System.out.println("You entered:" + userInput);
+        System.out.println("Output is: " + convertToCamelCase(userInput));
+    }
+
+    public static String convertToCamelCase(String s) {
+        String words[] = s.split("\\s+");
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (String word : words) {
+            char firstChar = word.charAt(0);
+            if (!Character.isUpperCase(firstChar)) {
+                stringBuilder.append(Character.toUpperCase(firstChar)).append(word.substring(1));
+            } else {
+                stringBuilder.append(word.substring(0));
+            }
         }
-        System.out.println("The average is: " + average(myArray));
-        System.out.println("The maxium number is: " + maximum(myArray));
-        System.out.println("The range of all the number is: " + range(myArray));
-        System.out.println("The mode of of all the number is: " + mode(myArray));
-        System.out.println("The histogram: ");
-        histogram(myArray);
+        String result = stringBuilder.toString().trim();
+        return result;
     }
 
     /* Write a method that calculates the average of the elements in the array. (3 marks)*/
@@ -152,4 +175,6 @@ public class JavaIIIWarmUp {
 //        char last = Character.toLowerCase(input.charAt(input.length() - 1));
 //        return first == last;
 //    }
+
+
 
