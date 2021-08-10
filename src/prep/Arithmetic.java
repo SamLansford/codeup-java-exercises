@@ -5,7 +5,7 @@ public class Arithmetic {
     public static int square(int number) {
         return number * number;
     }
-    
+
     public static int sum(int[] numbers) {
         int sum = 0;
 

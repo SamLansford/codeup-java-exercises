@@ -57,7 +57,6 @@ public class ControlStatementsLecture {
 //System.out.println(!tech.equalsIgnoreCase("tool"));
 
 
-
         // ==================== Slides 8 - 16
 
         // basically the same as JS :)
@@ -75,8 +74,6 @@ public class ControlStatementsLecture {
 //                    System.out.println("Default case");
 //                    break;
 //            }
-
-
 
 
     }

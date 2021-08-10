@@ -16,9 +16,9 @@ public class Input {
 
     public int getInt() {
 
-        try{
-           return Integer.parseInt(getString());
-        }catch (NumberFormatException e) {
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
             System.out.printf("Input could not be parsed into an integer. %s\n", e.getMessage());
             System.out.println("Try again");
             return getInt();
@@ -40,7 +40,7 @@ public class Input {
 
         try {
             return Double.parseDouble(getString());
-        }catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.printf("Input could not parsed into an double. %s\n", e.getMessage());
             System.out.println("Please try again");
             return getDouble();

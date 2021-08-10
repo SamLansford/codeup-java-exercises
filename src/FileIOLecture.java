@@ -73,7 +73,7 @@ public class FileIOLecture {
 //            e.printStackTrace();
 //        }
 //             ============================ WRITING FILES
-        Path p = Paths.get("data","info.txt");
+        Path p = Paths.get("data", "info.txt");
 
         List<String> newNames = Arrays.asList("John", "Fred", "Cathy");
         try {
@@ -87,7 +87,7 @@ public class FileIOLecture {
         names.add("Mary");
         try {
             Files.write(p, names, StandardOpenOption.APPEND);
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

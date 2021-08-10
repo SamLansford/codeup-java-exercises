@@ -17,10 +17,10 @@ public class Array {
 //        System.out.println(numbers);
 
 
-        Map<String, String>username = new HashMap<>();
+        Map<String, String> username = new HashMap<>();
         username.put("Sam", "lansford");
         username.put("Billy", "bob");
-        username.put("John","brown");
+        username.put("John", "brown");
         System.out.println(username);
         System.out.println(username.get("Sam"));
         System.out.println(username.getOrDefault("Ryan", "Something"));

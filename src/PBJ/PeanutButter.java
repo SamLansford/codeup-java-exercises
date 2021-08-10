@@ -1,6 +1,6 @@
 package PBJ;
 
-public class PeanutButter extends Ingredient{
+public class PeanutButter extends Ingredient {
 
     public void flavor() {
         System.out.println("The flavor of peanut butter tastes like peanuts");

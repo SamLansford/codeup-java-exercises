@@ -11,7 +11,7 @@ public abstract class Food implements Consumable {
             throw new IllegalAccessException(String.format("The argument %s cannot be null or empty", name));
         }
 
-        if (description == null || description.equals("")){
+        if (description == null || description.equals("")) {
             throw new IllegalAccessException(String.format("The argument %s cannot be null or empty", description));
         }
 

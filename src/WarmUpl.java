@@ -16,22 +16,24 @@ class WarmUp {
 
          */
 
-    public static boolean secondListIsOneMore(List<Integer> lOne, List<Integer> lTwo) {
-        for (int i = 0; i < lOne.size(); i += 1) {
-            if (lOne.get(i) + 1 != lTwo.get(i)) {
-                return false;
-            }
-        }
-        return true;
-    }
+//    public static boolean secondListIsOneMore(List<Integer> lOne, List<Integer> lTwo) {
+//        for (int i = 0; i < lOne.size(); i += 1) {
+//            if (lOne.get(i) + 1 != lTwo.get(i)) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
 
 
-    public static void main(String[] args) {
-        List<Integer> lOne = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-        List<Integer> lTwo = new ArrayList<>(Arrays.asList(2, 3, 4, 5));
-        List<Integer> lThree = new ArrayList<>(Arrays.asList(3, 4, 5, 6));
-        System.out.println(secondListIsOneMore(lOne, lTwo)); // should return true
-        System.out.println(secondListIsOneMore(lOne, lThree)); // should return false
-        System.out.println(secondListIsOneMore(lTwo, lThree)); // should return true
-    }
+//    public static void main(String[] args) {
+//        List<Integer> lOne = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+//        List<Integer> lTwo = new ArrayList<>(Arrays.asList(2, 3, 4, 5));
+//        List<Integer> lThree = new ArrayList<>(Arrays.asList(3, 4, 5, 6));
+//        System.out.println(secondListIsOneMore(lOne, lTwo)); // should return true
+//        System.out.println(secondListIsOneMore(lOne, lThree)); // should return false
+//        System.out.println(secondListIsOneMore(lTwo, lThree)); // should return true
+//    }
+
+
 }

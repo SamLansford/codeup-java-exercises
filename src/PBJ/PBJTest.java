@@ -32,7 +32,6 @@ public class PBJTest {
         bread.throwAway();
 
 
-
         Jelly jelly = new Jelly();
         jelly.flavor();
         jelly.color();

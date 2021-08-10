@@ -5,24 +5,30 @@ import animals.canine.Canine;
 public class Wolf extends Canine {
     private final boolean isEndangered;
     private final String nativeArea;
+
     public Wolf(String sound, String size, String subSpecies, String commonName, boolean isEndangered, String nativeArea) {
         super(size, commonName, subSpecies, sound);
         this.isEndangered = isEndangered;
         this.nativeArea = nativeArea;
     }
+
     public void printEmote() {
         System.out.println("*Stares at the moon*");
     }
-    public void printDelimiter(){
+
+    public void printDelimiter() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
-    public void printEndangeredStatus(){
+
+    public void printEndangeredStatus() {
         System.out.printf("Endangered: %s\n", getEndangeredStatus());
     }
-    public void printNativeArea(){
+
+    public void printNativeArea() {
         System.out.printf("Native Area: %s\n", this.nativeArea);
     }
-    public void printDetails(){
+
+    public void printDetails() {
         printEmote();
         makeSound();
         printDelimiter();
@@ -33,10 +39,11 @@ public class Wolf extends Canine {
         printEndangeredStatus();
         printDelimiter();
     }
-    private String getEndangeredStatus(){
-        if (isEndangered){
+
+    private String getEndangeredStatus() {
+        if (isEndangered) {
             return "No";
-        }else{
+        } else {
             return "Yes";
         }
     }

@@ -13,6 +13,7 @@ public class ArraysExercises {
         peoples[3] = new Person("Jay");
         peoples[4] = new Person("bob");
         peoples[5] = new Person("kate");
+        peoples[5] = new Person("kate");
 
         for (Person people : peoples) {
             System.out.println(people.getName());

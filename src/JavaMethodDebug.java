@@ -10,6 +10,7 @@ public class JavaMethodDebug {
         }
         return charCount;
     }
+
     public static void main(String[] args) {
         int numberOfSs = countLetters("MissiSSippi", 's');
         System.out.println(numberOfSs); // should return 4

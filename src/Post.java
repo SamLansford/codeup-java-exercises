@@ -14,7 +14,8 @@ public class Post {
     public Date createdAt;
     public Date updatedAt;
     public String author;
-//    public Comment[] comments;
+
+    //    public Comment[] comments;
     // instance methods
     public String returnViewsMessage() {
         return String.format("%s has %d views.", title, numberOfPostViews);
@@ -33,8 +34,6 @@ public class Post {
 //    }
 
 
-
-
     // static methods
     public static String getLongerBlogTitle(Post p1, Post p2) {
         if (p1.title.length() >= p2.title.length()) {
@@ -44,7 +43,7 @@ public class Post {
         }
     }
 
-//    public static Post[] getPostsByGenre(Posts[] allPosts, String genre) {
+    //    public static Post[] getPostsByGenre(Posts[] allPosts, String genre) {
     // filter out posts that don't match the genre
     // return posts in genre
 //    }

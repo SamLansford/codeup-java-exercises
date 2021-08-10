@@ -36,8 +36,8 @@ public class MethodsLecture {
 
     // *** Static vs Instance ***
 
-    public  static int doTheMathStatic() {
-        return 1+2;
+    public static int doTheMathStatic() {
+        return 1 + 2;
     }
 //
 //    public int doTheMathInstance() {
@@ -57,7 +57,6 @@ public class MethodsLecture {
     // *** Parameters ***
 
 
-
     // ============ Mini Exercise #1 =============
 
     /* TODO:
@@ -67,7 +66,7 @@ public class MethodsLecture {
      *   BONUS: Use the Scanner class to get the numbers from the user input
      * */
 
-    public  static int multiply(int num1, int num2){
+    public static int multiply(int num1, int num2) {
         return num1 * num2;
     }
 
@@ -89,7 +88,7 @@ public class MethodsLecture {
     // ============== Method Overloading ===============
 
     public static int doMath() {
-        return 1 +1;
+        return 1 + 1;
     }
 
 
@@ -102,8 +101,6 @@ public class MethodsLecture {
     }
 
 
-
-
     // ============ Mini Exercise #2 =============
 
     /* TODO: Write a set of overloaded public static void methods which can take in 1-3 names and print them to the console
@@ -113,7 +110,7 @@ public class MethodsLecture {
      *  */
 
     public static void printName(String name) {
-        System.out.printf("Hello, %s\n",name);
+        System.out.printf("Hello, %s\n", name);
     }
 
     public static void printName(String name1, String name2) {
@@ -130,7 +127,7 @@ public class MethodsLecture {
         String name2 = "Justin";
         String name3 = "Bob";
         printName(name1);
-        printName(name1,name2);
+        printName(name1, name2);
         printName(name1, name2, name3);
     }
 

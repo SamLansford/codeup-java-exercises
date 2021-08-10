@@ -198,12 +198,7 @@ public class PreMethodsExercises {
 //        15.Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
 
 
-
-
-
-
-
-// This function adds a all the numbers together from highest to lowest like if I input a 5 it's going to add (5 + 4 + 3 + 2 + 1);
+    // This function adds a all the numbers together from highest to lowest like if I input a 5 it's going to add (5 + 4 + 3 + 2 + 1);
     public static int sum(int k) {
         if (k > 0) {
             return k + sum(k - 1);

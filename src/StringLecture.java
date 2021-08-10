@@ -87,7 +87,6 @@ public class StringLecture {
 //        System.out.println(lastName);
 
 
-
 //        .toLowerCase()
 //        .toUpperCase()
 
@@ -110,13 +109,12 @@ public class StringLecture {
 
         String word1 = "cat";
         String pigLatinWord = word1
-            .trim()
-            .toLowerCase()
-            .substring(1)
-            .concat(word1.substring(0, 1).toLowerCase())
-            .concat("ay");
+                .trim()
+                .toLowerCase()
+                .substring(1)
+                .concat(word1.substring(0, 1).toLowerCase())
+                .concat("ay");
         System.out.println(pigLatinWord);
-
 
 
     }

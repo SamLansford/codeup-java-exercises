@@ -9,7 +9,7 @@ public class Dish {
     }
 
     public int changeCostInCents(int costInCents) {
-       return this.costInCents = costInCents;
+        return this.costInCents = costInCents;
     }
 
     public String getDishName() {
@@ -21,7 +21,7 @@ public class Dish {
     }
 
     public boolean shareWouldRecommend() {
-        return  wouldRecommend;
+        return wouldRecommend;
     }
 
     public boolean ChangeWouldRecommend(boolean wouldRecommend) {

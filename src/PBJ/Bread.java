@@ -1,6 +1,6 @@
 package PBJ;
 
-public class Bread extends Ingredient{
+public class Bread extends Ingredient {
 
     public void flavor() {
         System.out.println("The flavor of this bread taste like wheat");

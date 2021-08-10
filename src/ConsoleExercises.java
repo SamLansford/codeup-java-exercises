@@ -19,12 +19,9 @@ public class ConsoleExercises {
         System.out.println(word3);
 
 
-
-
 //        System.out.println("Please enter a sentence");
 //        String sentence = sc.nextLine();
 //        System.out.println(sentence);
-
 
 
 //

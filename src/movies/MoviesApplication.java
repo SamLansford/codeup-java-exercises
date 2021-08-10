@@ -84,7 +84,7 @@ public class MoviesApplication {
     private static int promptUserForChoice() {
         Input input = new Input();
         System.out.println("Enter your choice: ");
-        int response = input.getInt(0,5);
+        int response = input.getInt(0, 5);
 
         return response;
     }
