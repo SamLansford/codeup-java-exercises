@@ -20,8 +20,28 @@ public class JavaIIIWarmUp {
 //        sc.close();
 //        System.out.println("You entered:" + userInput);
 //        System.out.println("Output is: " + convertToCamelCase(userInput));
-        String s = "osefkjself";
-        System.out.println(finddigits(s));
+//        String s = "osefkjself";
+//        System.out.println(finddigits(s));
+          System.out.println(countingValleys(4,"UDDU"));
+    }
+
+    public static int countingValleys(int steps, String path) {
+        int altitude = 0;
+        int num_valleys = 0;
+
+        for(int i = 0; i < steps; i++) {
+            if (path.charAt(i) == 'U') {
+                if(altitude == -1) {
+                    num_valleys++;
+                }
+                altitude++;
+            } else {
+                if(path.charAt(i) == 'D') {
+                    altitude--;
+                }
+            }
+        }
+        return num_valleys;
     }
 
     static String finddigits(String s)
