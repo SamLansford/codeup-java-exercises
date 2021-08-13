@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 
 public class JavaIIIWarmUp {
@@ -23,7 +25,24 @@ public class JavaIIIWarmUp {
 //        String s = "osefkjself";
 //        System.out.println(finddigits(s));
           System.out.println(countingValleys(4,"UDDU"));
+        System.out.println(sockMerchant(9,L));
     }
+
+    public static int sockMerchant(int n, List<Integer> ar) {
+        int count = 0;
+        HashSet<Integer> hash = new HashSet<Integer>();
+        for(int i = 0; i< n; i++) {
+            if(!hash.contains(ar.get(i))) {
+                hash.add(ar.get(i));
+            } else {
+                hash.remove(ar.get(i));
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
 
     public static int countingValleys(int steps, String path) {
         int altitude = 0;
