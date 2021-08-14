@@ -24,9 +24,26 @@ public class JavaIIIWarmUp {
 //        System.out.println("Output is: " + convertToCamelCase(userInput));
 //        String s = "osefkjself";
 //        System.out.println(finddigits(s));
-          System.out.println(countingValleys(4,"UDDU"));
-        System.out.println(sockMerchant(9,L));
+//        System.out.println(countingValleys(4,"UDDU"));
+        System.out.println(repeatedString("abac",4));
     }
+
+    public static long repeatedString(String s, long n) {
+        long rep = n / s.length();
+        int modulo = (int ) (n % s.length());
+
+        long cont = 0;
+        for (int i = 0; i < s.length(); i++)
+            if (s.charAt(i) == 'a') cont++;
+
+        cont = cont * rep;
+
+        for (int i = 0; i < modulo; i++)
+            if (s.charAt(i) == 'a') cont++;
+
+        return cont;
+    }
+
 
     public static int sockMerchant(int n, List<Integer> ar) {
         int count = 0;
@@ -41,7 +58,7 @@ public class JavaIIIWarmUp {
         }
         return count;
     }
-}
+
 
 
     public static int countingValleys(int steps, String path) {
