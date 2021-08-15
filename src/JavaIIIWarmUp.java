@@ -28,6 +28,26 @@ public class JavaIIIWarmUp {
         System.out.println(repeatedString("abac",4));
     }
 
+    public static List<Integer> rotLeft(List<Integer> a, int d) {
+        int len = a.size();
+        if (len <= 1) return a;
+        for (int i=0; i<d; i++) {
+            a.add(a.get(0));
+            a.remove(0);
+        }
+        return a;
+    }
+
+    static int sum(List<List<Integer>> arr, int centerR, int centerC) {
+        int val = arr.get(centerR).get(centerC);
+        for (int col = centerC - 1; col <= centerC + 1 ; col++) {
+            val += arr.get(centerR-1).get(col);
+            val += arr.get(centerR+1).get(col);
+        }
+        return val;
+    }
+
+
     public static long repeatedString(String s, long n) {
         long rep = n / s.length();
         int modulo = (int ) (n % s.length());
