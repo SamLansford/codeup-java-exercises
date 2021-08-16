@@ -25,7 +25,34 @@ public class JavaIIIWarmUp {
 //        String s = "osefkjself";
 //        System.out.println(finddigits(s));
 //        System.out.println(countingValleys(4,"UDDU"));
-        System.out.println(repeatedString("abac",4));
+//        System.out.println(repeatedString("abac",4));
+        System.out.println(makeAnagram("adca","asefa"));
+    }
+
+    public static int makeAnagram(String a, String b) {
+        StringBuilder res = new StringBuilder();
+        int delCount = 0;
+        if(a.matches("[a-z]+") && b.matches("[a-z]+") && a.length()<=10000 && b.length()<=10000){
+
+            if (a != null && a != "" && b != null) {
+                StringBuilder s1 = new StringBuilder(a);
+                StringBuilder s2 = new StringBuilder(b);
+                for (int i = 0; i < s1.length(); i++) {
+                    for (int j = 0; j < s2.length(); j++) {
+                        if (s1.charAt(i) == s2.charAt(j)) {
+                            res.append(a.charAt(i));
+                            s2.deleteCharAt(j);
+                            break;
+                        }
+                    }
+                }
+
+            }
+            System.out.println(res.toString());
+            delCount += (a.length() - res.length());
+            delCount += (b.length() - res.length());
+        }
+        return delCount;
     }
 
     public static List<Integer> rotLeft(List<Integer> a, int d) {
