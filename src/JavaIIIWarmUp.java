@@ -26,7 +26,24 @@ public class JavaIIIWarmUp {
 //        System.out.println(finddigits(s));
 //        System.out.println(countingValleys(4,"UDDU"));
 //        System.out.println(repeatedString("abac",4));
-        System.out.println(makeAnagram("adca","asefa"));
+//        System.out.println(makeAnagram("adca","asefa"));
+        System.out.println(alternatingCharacters("aaabbbaabab"));
+    }
+
+    public static int alternatingCharacters(String s) {
+        char [] caractere=s.toCharArray();
+
+        char ant=caractere[0];
+        int cont=0;
+        for(int i=1;i<caractere.length;i++){
+            if(caractere[i]==ant){
+                cont++;
+            }else{
+                ant=caractere[i];
+            }
+        }
+
+        return cont;
     }
 
     public static int makeAnagram(String a, String b) {
