@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class JavaIIIWarmUp {
 
@@ -28,7 +25,23 @@ public class JavaIIIWarmUp {
 //        System.out.println(repeatedString("abac",4));
 //        System.out.println(makeAnagram("adca","asefa"));
         System.out.println(alternatingCharacters("aaabbbaabab"));
+        System.out.println(twoStrings("bib","go"));
     }
+
+    public static String twoStrings(String s1, String s2) {
+        HashMap<String, Integer> vales = new HashMap<String, Integer>();
+        for (char c: s1.toCharArray()) {
+            vales.put(c+"", 1);
+        }
+        for (char c : s2.toCharArray()) {
+            if (vales.get(c+"") != null) {
+                return "YES";
+            }
+        }
+        return "NO";
+
+    }
+
 
     public static int alternatingCharacters(String s) {
         char [] caractere=s.toCharArray();
