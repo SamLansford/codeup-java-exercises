@@ -24,8 +24,27 @@ public class JavaIIIWarmUp {
 //        System.out.println(countingValleys(4,"UDDU"));
 //        System.out.println(repeatedString("abac",4));
 //        System.out.println(makeAnagram("adca","asefa"));
-        System.out.println(alternatingCharacters("aaabbbaabab"));
-        System.out.println(twoStrings("bib","go"));
+//        System.out.println(alternatingCharacters("aaabbbaabab"));
+//        System.out.println(twoStrings("bib","go"));
+    }
+
+    public static int hourglassSum(List<List<Integer>> arr) {
+        int maxSum=Integer.MIN_VALUE;
+        for (int i=0;i<arr.size()-2;i++)
+        {
+            for (int j=0;j<arr.get(i).size()-2;j++)
+            {
+                int sum=arr.get(i).get(j)+arr.get(i).get(j+1)+arr.get(i).get(j+2)+
+                        arr.get(i+1).get(j+1)+
+                        arr.get(i+2).get(j)+arr.get(i+2).get(j+1)+arr.get(i+2).get(j+2);
+
+                if (sum > maxSum)
+                {
+                    maxSum=sum;
+                }
+            }
+        }
+        return maxSum;
     }
 
     public static String twoStrings(String s1, String s2) {
