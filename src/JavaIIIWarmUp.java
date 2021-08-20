@@ -28,6 +28,25 @@ public class JavaIIIWarmUp {
 //        System.out.println(twoStrings("bib","go"));
     }
 
+    public static void minimumBribes(List<Integer> q) {
+        int numBribes = 0;
+        for (int i = 0; i < q.size() - 1; i++) {
+            int j = i;
+            if (i + 3 < q.get(i)) {
+                System.out.println("Too chaotic");
+                return;
+            } while (q.get(i) > q.get(i+1)) {
+                numBribes++;
+                int tmp = q.get(i);
+                q.set(i, q.get(i+1));
+                q.set(i+1, tmp);
+                i = Math.max(0, i - 1);
+            }
+        }
+        System.out.println(numBribes);
+    }
+
+
     public static int hourglassSum(List<List<Integer>> arr) {
         int maxSum=Integer.MIN_VALUE;
         for (int i=0;i<arr.size()-2;i++)
