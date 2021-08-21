@@ -28,6 +28,34 @@ public class JavaIIIWarmUp {
 //        System.out.println(twoStrings("bib","go"));
     }
 
+    public static void countSwaps(List<Integer> a) {
+        Boolean unsorted = true;
+        Integer swaps = 0;
+        Integer uLen = a.size() - 1;
+        while(unsorted){
+            unsorted = false;
+            for (Integer i = 0; i < uLen; i++ ){
+                if(a.get(i)>a.get(i+1)){
+                    unsorted = true;
+                    swap(a, i, i+1);
+                    swaps++;
+                }
+            }
+        }
+        System.out.println("Array is sorted in "+swaps+" swaps.");
+        System.out.println("First Element: "+a.get(0));
+        System.out.println("Last Element: "+a.get(a.size()-1));
+        return;
+
+    }
+
+    public static List<Integer> swap(List<Integer> arr, Integer a, Integer b){
+        Integer tmp = arr.get(a);
+        arr.set(a, arr.get(b));
+        arr.set(b, tmp);
+        return arr;
+    }
+
     public static void minimumBribes(List<Integer> q) {
         int numBribes = 0;
         for (int i = 0; i < q.size() - 1; i++) {
