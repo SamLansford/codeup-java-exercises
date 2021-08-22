@@ -26,6 +26,22 @@ public class JavaIIIWarmUp {
 //        System.out.println(makeAnagram("adca","asefa"));
 //        System.out.println(alternatingCharacters("aaabbbaabab"));
 //        System.out.println(twoStrings("bib","go"));
+
+        float first = 1.20f, second = 2.45f;
+
+        System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+
+        float temporary = first;
+
+        first = second;
+
+        second = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
     }
 
     public static void countSwaps(List<Integer> a) {
