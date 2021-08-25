@@ -27,21 +27,27 @@ public class JavaIIIWarmUp {
 //        System.out.println(alternatingCharacters("aaabbbaabab"));
 //        System.out.println(twoStrings("bib","go"));
 
-        float first = 1.20f, second = 2.45f;
+//        float first = 12.0f, second = 24.5f;
+//
+//        System.out.println("--Before swap--");
+//        System.out.println("First number = " + first);
+//        System.out.println("Second number = " + second);
+//
+//        first = first - second;
+//        second = first + second;
+//        first = second - first;
+//
+//        System.out.println("--After swap--");
+//        System.out.println("First number = " + first);
+//        System.out.println("Second number = " + second);
 
-        float first = 12.0f, second = 24.5f;
+        int dividend = 25, divisor = 4;
 
-        System.out.println("--Before swap--");
-        System.out.println("First number = " + first);
-        System.out.println("Second number = " + second);
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
 
-        first = first - second;
-        second = first + second;
-        first = second - first;
-
-        System.out.println("--After swap--");
-        System.out.println("First number = " + first);
-        System.out.println("Second number = " + second);
+        System.out.println("Quotient = " + quotient);
+        System.out.println("Remainder = " + remainder);
     }
 
     public static void countSwaps(List<Integer> a) {
