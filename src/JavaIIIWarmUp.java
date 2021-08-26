@@ -41,13 +41,32 @@ public class JavaIIIWarmUp {
 //        System.out.println("First number = " + first);
 //        System.out.println("Second number = " + second);
 
-        int dividend = 25, divisor = 4;
+//        int dividend = 25, divisor = 4;
+//
+//        int quotient = dividend / divisor;
+//        int remainder = dividend % divisor;
+//
+//        System.out.println("Quotient = " + quotient);
+//        System.out.println("Remainder = " + remainder);
+        System.out.println(fizzBuzz(24));
 
-        int quotient = dividend / divisor;
-        int remainder = dividend % divisor;
+    }
 
-        System.out.println("Quotient = " + quotient);
-        System.out.println("Remainder = " + remainder);
+    public static boolean fizzBuzz(int i)
+    {
+
+        for (i = 1; i <= 100; i++)
+        {
+            if (((i % 5) == 0) && ((i % 7) == 0)) // Is it a multiple of 5 & 7?
+                System.out.println("fizzbuzz");
+            else if ((i % 5) == 0) // Is it a multiple of 5?
+                System.out.println("fizz");
+            else if ((i % 7) == 0) // Is it a multiple of 7?
+                System.out.println("buzz");
+            else
+                System.out.println(i); // Not a multiple of 5 or 7
+        }
+        return false;
     }
 
     public static void countSwaps(List<Integer> a) {
