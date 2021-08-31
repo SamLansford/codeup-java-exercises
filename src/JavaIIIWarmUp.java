@@ -71,11 +71,30 @@ public class JavaIIIWarmUp {
 //            res =res+a[i];
 //        System.out.println("average="+res/n);
 
-        int x1,x2,y1,y2;
-        double dis;
-        x1=1;y1=1;x2=4;y2=4;
-        dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-        System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+//        int x1,x2,y1,y2;
+//        double dis;
+//        x1=1;y1=1;x2=4;y2=4;
+//        dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+//        System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+
+        int n, res,i,j=0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n = s.nextInt();
+        int array[] = new int[n];
+        int rev[] = new int[n];
+        System.out.println("Enter "+n+" elements ");
+        for( i=0; i < n; i++)
+        {
+            array[i] = s.nextInt();
+        }
+        System.out.println("Reverse of an array is :");
+        for( i=n;i>0 ; i--,j++)
+        {
+            rev[j] = array[i-1];
+            System.out.println(rev[j]);
+
+        }
 
     }
 
