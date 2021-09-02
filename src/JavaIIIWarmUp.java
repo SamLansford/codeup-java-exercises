@@ -77,24 +77,48 @@ public class JavaIIIWarmUp {
 //        dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
 //        System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
 
-        int n, res,i,j=0;
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter number of elements in the array:");
-        n = s.nextInt();
-        int array[] = new int[n];
-        int rev[] = new int[n];
-        System.out.println("Enter "+n+" elements ");
-        for( i=0; i < n; i++)
-        {
-            array[i] = s.nextInt();
-        }
-        System.out.println("Reverse of an array is :");
-        for( i=n;i>0 ; i--,j++)
-        {
-            rev[j] = array[i-1];
-            System.out.println(rev[j]);
+//        int n, res,i,j=0;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Enter number of elements in the array:");
+//        n = s.nextInt();
+//        int array[] = new int[n];
+//        int rev[] = new int[n];
+//        System.out.println("Enter "+n+" elements ");
+//        for( i=0; i < n; i++)
+//        {
+//            array[i] = s.nextInt();
+//        }
+//        System.out.println("Reverse of an array is :");
+//        for( i=n;i>0 ; i--,j++)
+//        {
+//            rev[j] = array[i-1];
+//            System.out.println(rev[j]);
+//
+//        }
 
+        String s;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a string : ");
+        s=sc.nextLine();
+        System.out.println("Vowels in a string '"+s+"' are :");
+        vowels(s);
+    }
+
+    static void vowels(String str)
+    {
+        char ch;
+        int i=0;
+        for(int j=0;j<str.length();j++)
+        {
+            ch=str.charAt(j);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+            {
+                i=1;
+                System.out.println(ch);
+            }
         }
+        if(i==0)
+            System.out.println("There are no vowels in a entered string");
 
     }
 
