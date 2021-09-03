@@ -103,22 +103,60 @@ public class JavaIIIWarmUp {
 //        System.out.println("Vowels in a string '"+s+"' are :");
 //        vowels(s);
 
-        char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-        int rem,num;
-        String hexadecimal="";
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a Decimal number: ");
-        num=sc.nextInt();
-        System.out.println("Hexadecimal number is : ");
-        while(num != 0)
-        {
-            rem=num%16;
-            hexadecimal= ch[rem] + hexadecimal;
-            num= num/16;
-        }
-        System.out.print(hexadecimal);
-    }
+//        char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+//        int rem,num;
+//        String hexadecimal="";
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a Decimal number: ");
+//        num=sc.nextInt();
+//        System.out.println("Hexadecimal number is : ");
+//        while(num != 0)
+//        {
+//            rem=num%16;
+//            hexadecimal= ch[rem] + hexadecimal;
+//            num= num/16;
+//        }
+//        System.out.print(hexadecimal);
 
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter N : ");
+        int n=sc.nextInt();
+        System.out.print("Enter Symbol : ");
+
+        char c = sc.next().charAt(0);
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+
+            {
+                System.out.print(" ");
+            }
+
+            for(int j=1;j<=i*2-1;j++)
+
+            {
+                System.out.print(c);
+            }
+            System.out.println();
+
+        }
+        for(int i=n-1;i>0;i--)
+        {
+            for(int j=1;j<=n-i;j++)
+
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i*2-1;j++)
+
+            {
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+    }
 
     static void vowels(String str)
     {
