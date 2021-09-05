@@ -119,64 +119,108 @@ public class JavaIIIWarmUp {
 //        System.out.print(hexadecimal);
 
 
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter N : ");
-        int n=sc.nextInt();
-        System.out.print("Enter Symbol : ");
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter N : ");
+//        int n=sc.nextInt();
+//        System.out.print("Enter Symbol : ");
+//
+//        char c = sc.next().charAt(0);
+//
+//        for(int i=1;i<=n;i++)
+//        {
+//            for(int j=1;j<=n-i;j++)
+//
+//            {
+//                System.out.print(" ");
+//            }
+//
+//            for(int j=1;j<=i*2-1;j++)
+//
+//            {
+//                System.out.print(c);
+//            }
+//            System.out.println();
+//
+//        }
+//        for(int i=n-1;i>0;i--)
+//        {
+//            for(int j=1;j<=n-i;j++)
+//
+//            {
+//                System.out.print(" ");
+//            }
+//            for(int j=1;j<=i*2-1;j++)
+//
+//            {
+//                System.out.print(c);
+//            }
+//            System.out.println();
+//        }
+//    }
+//
+//    static void vowels(String str)
+//    {
+//        char ch;
+//        int i=0;
+//        for(int j=0;j<str.length();j++)
+//        {
+//            ch=str.charAt(j);
+//            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+//            {
+//                i=1;
+//                System.out.println(ch);
+//            }
+//        }
+//        if(i==0)
+//            System.out.println("There are no vowels in a entered string");
 
-        char c = sc.next().charAt(0);
 
-        for(int i=1;i<=n;i++)
+        int n, res,i;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter "+n+" elements ");
+        for( i=0; i < n; i++)
         {
-            for(int j=1;j<=n-i;j++)
-
-            {
-                System.out.print(" ");
-            }
-
-            for(int j=1;j<=i*2-1;j++)
-
-            {
-                System.out.print(c);
-            }
-            System.out.println();
-
+            a[i] = s.nextInt();
         }
-        for(int i=n-1;i>0;i--)
-        {
-            for(int j=1;j<=n-i;j++)
 
-            {
-                System.out.print(" ");
-            }
-            for(int j=1;j<=i*2-1;j++)
+        System.out.println( "elements in array ");
+        printarray(a);
+        Sort(a);
+        System.out.println( "\nelements after sorting");
+        printarray(a);
 
-            {
-                System.out.print(c);
+    }
+
+    public static void Sort(int a[]) {
+        int n = a.length, i, j, p, temp;
+        for (i = 0; i < n - 1; i++) {
+            p = i;
+            for (j = i + 1; j < n; j++) {
+                if (a[p] > a[j])
+                    p = j;
+
             }
-            System.out.println();
+            temp = a[p];
+            a[p] = a[i];
+            a[i] = temp;
+
         }
     }
 
-    static void vowels(String str)
+    public static void printarray(int a[])
     {
-        char ch;
-        int i=0;
-        for(int j=0;j<str.length();j++)
+        for(int i=0; i < a.length; i++)
         {
-            ch=str.charAt(j);
-            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
-            {
-                i=1;
-                System.out.println(ch);
-            }
+
+            System.out.print(a[i]+" ");
         }
-        if(i==0)
-            System.out.println("There are no vowels in a entered string");
 
     }
 
-    public static boolean fizzBuzz(int i)
+        public static boolean fizzBuzz(int i)
     {
 
         for (i = 1; i <= 100; i++)
