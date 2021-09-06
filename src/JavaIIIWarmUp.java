@@ -175,23 +175,50 @@ public class JavaIIIWarmUp {
 //            System.out.println("There are no vowels in a entered string");
 
 
-        int n, res,i;
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter number of elements in the array:");
-        n = s.nextInt();
-        int a[] = new int[n];
-        System.out.println("Enter "+n+" elements ");
-        for( i=0; i < n; i++)
+//        int n, res,i;
+//        Scanner s = new Scanner(System.in);
+//        System.out.print("Enter number of elements in the array:");
+//        n = s.nextInt();
+//        int a[] = new int[n];
+//        System.out.println("Enter "+n+" elements ");
+//        for( i=0; i < n; i++)
+//        {
+//            a[i] = s.nextInt();
+//        }
+//
+//        System.out.println( "elements in array ");
+//        printarray(a);
+//        Sort(a);
+//        System.out.println( "\nelements after sorting");
+//        printarray(a);
+
+        int oct, dec=0, i=0, t;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Octl Number : ");
+        oct = sc.nextInt();
+        while(oct != 0)
         {
-            a[i] = s.nextInt();
+            dec =dec + (oct%10) *(int)Math.pow(8, i);
+            i++;
+            oct = oct/10;
         }
+        String hex=hexdecimal(dec);
+        System.out.println("Hexdecimal number is :"+hex);
 
-        System.out.println( "elements in array ");
-        printarray(a);
-        Sort(a);
-        System.out.println( "\nelements after sorting");
-        printarray(a);
+    }
 
+    static String hexdecimal(int q)
+    {
+        char a[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+        int rem;
+        String hexdec="";
+        while(q != 0)
+        {
+            rem=q%16;
+            hexdec= a[rem] + hexdec;
+            q= q/16;
+        }
+        return hexdec;
     }
 
     public static void Sort(int a[]) {
