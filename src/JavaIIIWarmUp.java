@@ -192,20 +192,50 @@ public class JavaIIIWarmUp {
 //        System.out.println( "\nelements after sorting");
 //        printarray(a);
 
-        int oct, dec=0, i=0, t;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Octl Number : ");
-        oct = sc.nextInt();
-        while(oct != 0)
+//        int oct, dec=0, i=0, t;
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter Octl Number : ");
+//        oct = sc.nextInt();
+//        while(oct != 0)
+//        {
+//            dec =dec + (oct%10) *(int)Math.pow(8, i);
+//            i++;
+//            oct = oct/10;
+//        }
+//        String hex=hexdecimal(dec);
+//        System.out.println("Hexdecimal number is :"+hex);
+
+        int i,len, key, array[];
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter Array length:");
+
+        len = input.nextInt();
+
+        array = new int[len];
+
+        System.out.println("Enter " + len + " elements");
+
+        for (i = 0; i < len; i++)
         {
-            dec =dec + (oct%10) *(int)Math.pow(8, i);
-            i++;
-            oct = oct/10;
+            array[i] = input.nextInt();
         }
-        String hex=hexdecimal(dec);
-        System.out.println("Hexdecimal number is :"+hex);
+        System.out.println("Enter the search key value:");
+        key = input.nextInt();
+        for (i = 0; i < len; i++)
+        {
+            if (array[i]== key)
+            {
+                System.out.println(key+" is present at location "+(i+1));
+                break;
+            }
+        }
+        if (i == len)
+            System.out.println(key + " doesn't exist in array.");
 
     }
+
 
     static String hexdecimal(int q)
     {
