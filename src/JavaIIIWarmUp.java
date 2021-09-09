@@ -205,34 +205,49 @@ public class JavaIIIWarmUp {
 //        String hex=hexdecimal(dec);
 //        System.out.println("Hexdecimal number is :"+hex);
 
-        int i,len, key, array[];
+//        int i,len, key, array[];
+//
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.println("Enter Array length:");
+//
+//        len = input.nextInt();
+//
+//        array = new int[len];
+//
+//        System.out.println("Enter " + len + " elements");
+//
+//        for (i = 0; i < len; i++)
+//        {
+//            array[i] = input.nextInt();
+//        }
+//        System.out.println("Enter the search key value:");
+//        key = input.nextInt();
+//        for (i = 0; i < len; i++)
+//        {
+//            if (array[i]== key)
+//            {
+//                System.out.println(key+" is present at location "+(i+1));
+//                break;
+//            }
+//        }
+//        if (i == len)
+//            System.out.println(key + " doesn't exist in array.");
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Enter Array length:");
-
-        len = input.nextInt();
-
-        array = new int[len];
-
-        System.out.println("Enter " + len + " elements");
-
-        for (i = 0; i < len; i++)
+        long a,y,c;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter  any  calendar year :");
+        y=sc.nextLong();
+        if(y!=0)
         {
-            array[i] = input.nextInt();
+            a=(y%400==0)?(c=1):((y%100==0)?(c=0):((y%4==0)?(c=1):(c=0)));
+            if(a==1)
+                System.out.println(y+" is a leap year");
+            else
+                System.out.println(y+" is not a leap year");
         }
-        System.out.println("Enter the search key value:");
-        key = input.nextInt();
-        for (i = 0; i < len; i++)
-        {
-            if (array[i]== key)
-            {
-                System.out.println(key+" is present at location "+(i+1));
-                break;
-            }
-        }
-        if (i == len)
-            System.out.println(key + " doesn't exist in array.");
+        else
+            System.out.println("year zero does not exist ");
 
     }
 
