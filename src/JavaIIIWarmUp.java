@@ -249,11 +249,29 @@ public class JavaIIIWarmUp {
 //        else
 //            System.out.println("year zero does not exist ");
 
-        long year;
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter  any calendar year :");
-        year=sc.nextLong();
-        leapOrNot(year);
+//        long year;
+//        Scanner sc=new Scanner(System.in);
+//        System.out.print("enter  any calendar year :");
+//        year=sc.nextLong();
+//        leapOrNot(year);
+
+        double  dis,amount,markedprice,s;
+
+        markedprice=1000;
+
+        dis=25;  // 25 mean 25%
+
+        System.out.println("markedprice= "+markedprice);
+
+        System.out.println("discount rate="+dis);
+
+        s=100-dis;
+
+        amount= (s*markedprice)/100;
+
+        System.out.println("amount after discount="+amount);
+
+    }
     }
 
 
