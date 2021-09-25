@@ -255,24 +255,44 @@ public class JavaIIIWarmUp {
 //        year=sc.nextLong();
 //        leapOrNot(year);
 
-        double  dis,amount,markedprice,s;
+//        double  dis,amount,markedprice,s;
+//
+//        markedprice=1000;
+//
+//        dis=25;  // 25 mean 25%
+//
+//        System.out.println("markedprice= "+markedprice);
+//
+//        System.out.println("discount rate="+dis);
+//
+//        s=100-dis;
+//
+//        amount= (s*markedprice)/100;
+//
+//        System.out.println("amount after discount="+amount);
 
-        markedprice=1000;
+            long units;
 
-        dis=25;  // 25 mean 25%
+            Scanner sc=new Scanner(System.in);
 
-        System.out.println("markedprice= "+markedprice);
+            System.out.println("enter number of units");
 
-        System.out.println("discount rate="+dis);
+            units=sc.nextLong();
 
-        s=100-dis;
+            double billpay=0;
 
-        amount= (s*markedprice)/100;
+            if(units<100)
+                billpay=units*1.20;
 
-        System.out.println("amount after discount="+amount);
+            else if(units<300)
+                billpay=100*1.20+(units-100)*2;
 
-    }
-    }
+            else if(units>300)
+                billpay=100*1.20+200 *2+(units-300)*3;
+
+            System.out.println("Bill to pay : " + billpay);
+
+        }
 
 
     static void leapOrNot(long year)
