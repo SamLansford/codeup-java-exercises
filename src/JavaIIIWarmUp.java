@@ -271,28 +271,49 @@ public class JavaIIIWarmUp {
 //
 //        System.out.println("amount after discount="+amount);
 
-            long units;
+//            long units;
+//
+//            Scanner sc=new Scanner(System.in);
+//
+//            System.out.println("enter number of units");
+//
+//            units=sc.nextLong();
+//
+//            double billpay=0;
+//
+//            if(units<100)
+//                billpay=units*1.20;
+//
+//            else if(units<300)
+//                billpay=100*1.20+(units-100)*2;
+//
+//            else if(units>300)
+//                billpay=100*1.20+200 *2+(units-300)*3;
+//
+//            System.out.println("Bill to pay : " + billpay);
+//
+//        }
 
-            Scanner sc=new Scanner(System.in);
+        int n=5,p=3,result=1;
 
-            System.out.println("enter number of units");
-
-            units=sc.nextLong();
-
-            double billpay=0;
-
-            if(units<100)
-                billpay=units*1.20;
-
-            else if(units<300)
-                billpay=100*1.20+(units-100)*2;
-
-            else if(units>300)
-                billpay=100*1.20+200 *2+(units-300)*3;
-
-            System.out.println("Bill to pay : " + billpay);
-
+        if(n>=0&&p==0)
+        {
+            result=1;
         }
+        else if(n==0&&p>=1)
+        {
+            result=0;
+        }
+        else
+        {
+            for(int i=1;i<=p;i++)
+            {
+                result=result*n;
+            }
+        }
+        System.out.println(n+"^"+p+"="+result);
+
+    }
 
 
     static void leapOrNot(long year)
