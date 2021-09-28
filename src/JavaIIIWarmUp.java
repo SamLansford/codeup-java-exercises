@@ -314,55 +314,83 @@ public class JavaIIIWarmUp {
 //        System.out.println(n+"^"+p+"="+result);
 
 
-        int row, col,i,j;
-        Scanner in = new Scanner(System.in);
+//        int row, col,i,j;
+//        Scanner in = new Scanner(System.in);
+//
+//        System.out.println("Enter the number of rows");
+//        row = in.nextInt();
+//
+//        System.out.println("Enter the number  columns");
+//        col  = in.nextInt();
+//
+//        int mat1[][] = new int[row][col];
+//        int mat2[][] = new int[row][col];
+//        int res[][] = new int[row][col];
+//
+//        System.out.println("Enter the elements of matrix1");
+//
+//        for (  i= 0 ; i < row ; i++ )
+//        {
+//
+//            for ( j= 0 ; j < col ;j++ )
+//                mat1[i][j] = in.nextInt();
+//
+//        }
+//        System.out.println("Enter the elements of  matrix2");
+//
+//
+//        for (  i= 0 ; i < row ; i++ )
+//        {
+//
+//            for ( j= 0 ; j < col ;j++ )
+//                mat2[i][j] = in.nextInt();
+//
+//
+//        }
+//
+//
+//        for (  i= 0 ; i < row ; i++ )
+//            for ( j= 0 ; j < col ;j++ )
+//                res[i][j] =  mat1[i][j] - mat2[i][j]  ;
+//
+//        System.out.println("subtract  of  two matrices:-");
+//
+//        for (  i= 0 ; i < row ; i++ )
+//        {
+//            for ( j= 0 ; j < col ;j++ )
+//                System.out.print(res[i][j]+"\t");
+//
+//            System.out.println();
+//        }
 
-        System.out.println("Enter the number of rows");
-        row = in.nextInt();
 
-        System.out.println("Enter the number  columns");
-        col  = in.nextInt();
-
-        int mat1[][] = new int[row][col];
-        int mat2[][] = new int[row][col];
-        int res[][] = new int[row][col];
-
-        System.out.println("Enter the elements of matrix1");
-
-        for (  i= 0 ; i < row ; i++ )
+        long n1,n2;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter  number 1");
+        n1=sc.nextLong();
+        System.out.println("enter  number 2");
+        n2=sc.nextLong();
+        if(n1>0 && n2>0)
         {
-
-            for ( j= 0 ; j < col ;j++ )
-                mat1[i][j] = in.nextInt();
-
+            long result=gcdCal(n1,n2);
+            System.out.println("Gcd of two numbers = "+result);
         }
-        System.out.println("Enter the elements of  matrix2");
-
-
-        for (  i= 0 ; i < row ; i++ )
-        {
-
-            for ( j= 0 ; j < col ;j++ )
-                mat2[i][j] = in.nextInt();
-
-
-        }
-
-
-        for (  i= 0 ; i < row ; i++ )
-            for ( j= 0 ; j < col ;j++ )
-                res[i][j] =  mat1[i][j] - mat2[i][j]  ;
-
-        System.out.println("subtract  of  two matrices:-");
-
-        for (  i= 0 ; i < row ; i++ )
-        {
-            for ( j= 0 ; j < col ;j++ )
-                System.out.print(res[i][j]+"\t");
-
-            System.out.println();
-        }
+        else
+            System.out.println("Please enter numbers greater than zero");
     }
+    static long gcdCal(long a,long b)
+    {
+        while (b > 0)
+        {
+            long temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+
+
+    }
+
 
 
     static void leapOrNot(long year)
