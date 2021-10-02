@@ -426,22 +426,28 @@ public class JavaIIIWarmUp {
 //
 
 
-        long n,sum;
+        long n,s;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a number ");
         n=sc.nextLong();
-        for(sum=0 ;n!=0 ;n/=10)
+        s=sum(n);
+        System.out.println("Sum of digits of a number is "+s);
+
+
+
+    }
+
+
+    static int sum(long num)
+    {
+        int sum=0;
+        while(num!=0)
         {
-            sum+=n%10;
+            sum+=num%10;
+            num/=10;
         }
-        System.out.println("Sum of digits of a number is "+sum);
+        return sum;
     }
-
-
-    }
-
-
-
 
 
     static long lcmCalculation(long n1,long n2)
