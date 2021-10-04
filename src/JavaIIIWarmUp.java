@@ -434,29 +434,32 @@ public class JavaIIIWarmUp {
 //        System.out.println("Sum of digits of a number is "+s);
 
 
-        long n,sum=0;
+        long n,p;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a number");
         n=sc.nextLong();
-        int i=1;
-        while(i<=n/2)
+        p=perfectOrNot(n);
+        if(p==n)
+            System.out.println(n+" is a perfect number");
+        else
+            System.out.println(n+" is not a  perfect number");
+
+
+    }
+
+
+    static long perfectOrNot(long num)
+    {
+        long sum=0;
+        for(int i=1;i<=num/2;i++)
         {
-            if(n%i==0)
+            if(num%i==0)
             {
                 sum+=i;
             }
-            i++;
         }
-        if(sum==n)
-        {
-            System.out.println(n+" is a perfect number");
-        }
-        else
-            System.out.println(n+" is not a  perfect number");
+        return sum;
     }
-
-    }
-
 
     static int sum(long num)
     {
