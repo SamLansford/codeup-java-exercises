@@ -444,18 +444,38 @@ public class JavaIIIWarmUp {
 //        else
 //            System.out.println(n+" is not a  perfect number");
 
-        long n,sum;
+//        long n,sum;
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter a number ");
+//        n=sc.nextLong();
+//        for(sum=0 ;n!=0 ;n/=10)
+//        {
+//            sum+=n%10;
+//        }
+//        System.out.println("Sum of digits of a number is "+sum);
+
+        long n1,n2;
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter a number ");
-        n=sc.nextLong();
-        for(sum=0 ;n!=0 ;n/=10)
-        {
-            sum+=n%10;
-        }
-        System.out.println("Sum of digits of a number is "+sum);
+        System.out.println("Enter  number 1");
+        n1=sc.nextLong();
+        System.out.println("Enter  number 2");
+        n2=sc.nextLong();
+        long result=hcfCal(n1,n2);
+        System.out.println("Hcf of two numbers = "+result);
 
     }
 
+
+    static long hcfCal(long a,long b)
+    { long temp;
+        while (b > 0)
+        {
+            temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return b;
+    }
 
     static long perfectOrNot(long num)
     {
