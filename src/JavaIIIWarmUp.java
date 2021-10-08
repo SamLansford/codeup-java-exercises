@@ -454,14 +454,27 @@ public class JavaIIIWarmUp {
 //        }
 //        System.out.println("Sum of digits of a number is "+sum);
 
-        long n1,n2;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter  number 1");
-        n1=sc.nextLong();
-        System.out.println("Enter  number 2");
-        n2=sc.nextLong();
-        long result=hcfCal(n1,n2);
-        System.out.println("Hcf of two numbers = "+result);
+//        long n1,n2;
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter  number 1");
+//        n1=sc.nextLong();
+//        System.out.println("Enter  number 2");
+//        n2=sc.nextLong();
+//        long result=hcfCal(n1,n2);
+//        System.out.println("Hcf of two numbers = "+result);
+
+
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the radius of cone:");
+        double r=s.nextDouble();
+        System.out.println("Enter the height of cone:");
+        double h=s.nextDouble();
+
+
+        double  volume=(22*r*r*h)/(3*7);
+
+        System.out.println("Volume Of Cone is:" +volume);
+
 
     }
 
