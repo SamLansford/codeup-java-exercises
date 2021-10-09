@@ -464,17 +464,27 @@ public class JavaIIIWarmUp {
 //        System.out.println("Hcf of two numbers = "+result);
 
 
+//        Scanner s= new Scanner(System.in);
+//        System.out.println("Enter the radius of cone:");
+//        double r=s.nextDouble();
+//        System.out.println("Enter the height of cone:");
+//        double h=s.nextDouble();
+//
+//
+//        double  volume=(22*r*r*h)/(3*7);
+//
+//        System.out.println("Volume Of Cone is:" +volume);
+
+
         Scanner s= new Scanner(System.in);
-        System.out.println("Enter the radius of cone:");
+        System.out.println("Enter the radius of sphere:");
         double r=s.nextDouble();
-        System.out.println("Enter the height of cone:");
-        double h=s.nextDouble();
 
 
-        double  volume=(22*r*r*h)/(3*7);
 
-        System.out.println("Volume Of Cone is:" +volume);
+        double  volume= (4*22*r*r*r)/(3*7);
 
+        System.out.println("Volume is:" +volume);
 
     }
 
