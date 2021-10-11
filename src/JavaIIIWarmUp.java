@@ -476,15 +476,26 @@ public class JavaIIIWarmUp {
 //        System.out.println("Volume Of Cone is:" +volume);
 
 
+//        Scanner s= new Scanner(System.in);
+//        System.out.println("Enter the radius of sphere:");
+//        double r=s.nextDouble();
+//
+//
+//
+//        double  volume= (4*22*r*r*r)/(3*7);
+//
+//        System.out.println("Volume is:" +volume);
+
+
         Scanner s= new Scanner(System.in);
-        System.out.println("Enter the radius of sphere:");
-        double r=s.nextDouble();
 
+        System.out.println("Enter the height:");
+        double d1= s.nextDouble();
+        System.out.println("Enter the breadth:");
+        double d2= s.nextDouble();
 
-
-        double  volume= (4*22*r*r*r)/(3*7);
-
-        System.out.println("Volume is:" +volume);
+        double  area=(d1*d2) ;
+        System.out.println("Area of Parallelogram is: " + area);
 
     }
 
