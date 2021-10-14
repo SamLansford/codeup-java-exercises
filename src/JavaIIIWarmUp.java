@@ -486,16 +486,29 @@ public class JavaIIIWarmUp {
 //
 //        System.out.println("Volume is:" +volume);
 
+//
+//        Scanner s= new Scanner(System.in);
+//
+//        System.out.println("Enter the height:");
+//        double d1= s.nextDouble();
+//        System.out.println("Enter the breadth:");
+//        double d2= s.nextDouble();
+//
+//        double  area=(d1*d2) ;
+//        System.out.println("Area of Parallelogram is: " + area);
+
 
         Scanner s= new Scanner(System.in);
 
+        System.out.println("Enter the area of base:");
+        double base=s.nextDouble();
         System.out.println("Enter the height:");
-        double d1= s.nextDouble();
-        System.out.println("Enter the breadth:");
-        double d2= s.nextDouble();
+        double height=s.nextDouble();
 
-        double  area=(d1*d2) ;
-        System.out.println("Area of Parallelogram is: " + area);
+
+
+        double  area=base*height ;
+        System.out.println("Volume Of Prism is: " + area);
 
     }
 
