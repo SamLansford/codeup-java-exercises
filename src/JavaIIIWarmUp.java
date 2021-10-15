@@ -498,18 +498,32 @@ public class JavaIIIWarmUp {
 //        System.out.println("Area of Parallelogram is: " + area);
 
 
-        Scanner s= new Scanner(System.in);
+//        Scanner s= new Scanner(System.in);
+//
+//        System.out.println("Enter the area of base:");
+//        double base=s.nextDouble();
+//        System.out.println("Enter the height:");
+//        double height=s.nextDouble();
 
-        System.out.println("Enter the area of base:");
-        double base=s.nextDouble();
-        System.out.println("Enter the height:");
-        double height=s.nextDouble();
+//        double  area=base*height ;
+//        System.out.println("Volume Of Prism is: " + area);
 
 
+        double amount=0,principle=1000,rate=10,time=3,ci;
 
-        double  area=base*height ;
-        System.out.println("Volume Of Prism is: " + area);
+        System.out.println("principle= "+principle);
 
+        System.out.println("rate="+rate);
+
+        System.out.println("time="+time);
+
+        amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
+
+        System.out.println("amount="+amount);
+
+        ci=amount-principle;
+
+        System.out.println("compound interest="+ci);
     }
 
 
