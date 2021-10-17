@@ -509,21 +509,40 @@ public class JavaIIIWarmUp {
 //        System.out.println("Volume Of Prism is: " + area);
 
 
-        double amount=0,principle=1000,rate=10,time=3,ci;
+//        double amount=0,principle=1000,rate=10,time=3,ci;
+//
+//        System.out.println("principle= "+principle);
+//
+//        System.out.println("rate="+rate);
+//
+//        System.out.println("time="+time);
+//
+//        amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
+//
+//        System.out.println("amount="+amount);
+//
+//        ci=amount-principle;
+//
+//        System.out.println("compound interest="+ci);
 
-        System.out.println("principle= "+principle);
 
-        System.out.println("rate="+rate);
+    }
 
-        System.out.println("time="+time);
+    public static boolean fizzBuzz(int i)
+    {
 
-        amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
-
-        System.out.println("amount="+amount);
-
-        ci=amount-principle;
-
-        System.out.println("compound interest="+ci);
+        for (i = 1; i <= 100; i++)
+        {
+            if (((i % 5) == 0) && ((i % 7) == 0))
+                System.out.println("fizzbuzz");
+            else if ((i % 5) == 0)
+                System.out.println("fizz");
+            else if ((i % 7) == 0)
+                System.out.println("buzz");
+            else
+                System.out.println(i);
+        }
+        return false;
     }
 
 
@@ -637,22 +656,7 @@ public class JavaIIIWarmUp {
 
     }
 
-        public static boolean fizzBuzz(int i)
-    {
 
-        for (i = 1; i <= 100; i++)
-        {
-            if (((i % 5) == 0) && ((i % 7) == 0)) // Is it a multiple of 5 & 7?
-                System.out.println("fizzbuzz");
-            else if ((i % 5) == 0) // Is it a multiple of 5?
-                System.out.println("fizz");
-            else if ((i % 7) == 0) // Is it a multiple of 7?
-                System.out.println("buzz");
-            else
-                System.out.println(i); // Not a multiple of 5 or 7
-        }
-        return false;
-    }
 
     public static void countSwaps(List<Integer> a) {
         Boolean unsorted = true;
