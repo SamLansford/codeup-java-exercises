@@ -525,14 +525,35 @@ public class JavaIIIWarmUp {
 //
 //        System.out.println("compound interest="+ci);
 
-        int i=100,arm;
-        System.out.println("Armstrong numbers between 100 to 999");
-        while(i<1000)
-        {
-            arm=armstrongOrNot(i);
-            if(arm==i)
-                System.out.println(i);
-            i++;
+//        int i=100,arm;
+//        System.out.println("Armstrong numbers between 100 to 999");
+//        while(i<1000)
+//        {
+//            arm=armstrongOrNot(i);
+//            if(arm==i)
+//                System.out.println(i);
+//            i++;
+//        }
+
+
+        Scanner scanner = new Scanner(System.in);
+
+
+
+        System.out.println("Please enter three numbers:");
+        double num1 = scanner.nextDouble();
+        double num2 = scanner.nextDouble();
+        double num3 = scanner.nextDouble();
+
+        System.out.println("The inputs in sorted order are:");
+
+        if ((num1 < num2) && (num1 < num3)) {
+            System.out.println(num1);
+        } else if ((num2 < num1) && (num2 < num3)) {
+            System.out.println(num2);
+        } else if ((num3 < num1) && (num3 < num2)) {
+            System.out.println(num3);
+
         }
 
     }
