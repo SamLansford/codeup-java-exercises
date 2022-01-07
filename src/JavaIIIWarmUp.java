@@ -539,16 +539,16 @@ public class JavaIIIWarmUp {
         Scanner scanner = new Scanner(System.in);
 
 
-
-        System.out.println("Please enter three numbers:");
-        double num1 = scanner.nextDouble();
-        double num2 = scanner.nextDouble();
-        double num3 = scanner.nextDouble();
-
-        System.out.println("The inputs in sorted order are:");
+//
+//        System.out.println("Please enter three numbers:");
+//        double num1 = scanner.nextDouble();
+//        double num2 = scanner.nextDouble();
+//        double num3 = scanner.nextDouble();
+//
+//        System.out.println("The inputs in sorted order are:");
 
 //        if ((num1 < num2) && (num1 < num3)) {
-//            System.out.println(num1);
+//            System.out.println(nu
 //        } else if ((num2 < num1) && (num2 < num3)) {
 //            System.out.println(num2);
 //        } else if ((num3 < num1) && (num3 < num2)) {

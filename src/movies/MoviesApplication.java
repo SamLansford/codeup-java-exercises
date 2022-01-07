@@ -2,6 +2,9 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class MoviesApplication {
 
     public static void main(String[] args) {
@@ -27,65 +30,68 @@ public class MoviesApplication {
                 break;
             case 1:
                 for (Movie movie : MoviesArray.findAll()) {
-                    System.out.println("\n");
+                    String newLine = System.lineSeparator();
+                    System.out.println(newLine);
                     System.out.printf("%s -- %s", movie.getName(), movie.getCategory());
-                    System.out.println("\n");
+                    System.out.println(newLine);
                 }
                 break;
             case 2:
-                System.out.println("\n");
                 viewMoviesByCategory("animated");
-                System.out.println("\n");
                 break;
             case 3:
-                System.out.println("\n");
                 viewMoviesByCategory("drama");
-                System.out.println("\n");
                 break;
             case 4:
-                System.out.println("\n");
                 viewMoviesByCategory("horror");
-                System.out.println("\n");
                 break;
             case 5:
-                System.out.println("\n");
                 viewMoviesByCategory("scifi");
-                System.out.println("\n");
                 break;
         }
         return continueRunning;
     }
 
 
+
     private static void viewMoviesByCategory(String category) {
         for (Movie movie : MoviesArray.findAll()) {
             if (movie.getCategory().equalsIgnoreCase(category)) {
                 // Display movie
-                System.out.printf("%s -- %s", movie.getName(), movie.getCategory());
+                System.out.printf("%s -- %s \n", movie.getName(), movie.getCategory());
             }
         }
     }
+    
+    
+//    public static Movie[] addMovie(Movie[] movies, Movie movie) {
+//        Movie[] newMovie = Arrays.copyOf(movies, movies.length + 1);
+//
+//        newMovie[newMovie.length - 1] = movie;
+//
+//        return newMovie;
+//    }
+
 
 
     private static String returnMenuDisplay() {
-        String choices = "What would you like to do? \n" +
+
+        return "What would you like to do? \n" +
                 "\n" +
                 "0 - exit\n" +
                 "1 - view all movies\n" +
                 "2 - view movies in the animated category\n" +
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
-                "5 - view movies in the scifi category\n";
-
-        return choices;
+                "5 - view movies in the scifi category\n" +
+                "6 - add new movie\n";
 
     }
 
     private static int promptUserForChoice() {
         Input input = new Input();
         System.out.println("Enter your choice: ");
-        int response = input.getInt(0, 5);
 
-        return response;
+        return input.getInt(0, 6);
     }
 }
