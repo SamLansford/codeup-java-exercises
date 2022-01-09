@@ -9,7 +9,6 @@ public class MoviesApplication {
 
     public static void main(String[] args) {
 
-
         boolean running = true;
 
         while (running) {
@@ -22,6 +21,7 @@ public class MoviesApplication {
 
 
     private static boolean executeUserChoice(int choice) {
+
         boolean continueRunning = true;
 
         switch (choice) {
@@ -48,6 +48,8 @@ public class MoviesApplication {
             case 5:
                 viewMoviesByCategory("scifi");
                 break;
+            case 6:
+                addNewMovie();
         }
         return continueRunning;
     }
@@ -62,17 +64,20 @@ public class MoviesApplication {
             }
         }
     }
-    
-    
-//    public static Movie[] addMovie(Movie[] movies, Movie movie) {
-//        Movie[] newMovie = Arrays.copyOf(movies, movies.length + 1);
-//
-//        newMovie[newMovie.length - 1] = movie;
-//
-//        return newMovie;
-//    }
 
+    public static Movie[] addNewMovie() {
+        Movie[] movieList = MoviesArray.findAll();
+        Input input = new Input();
+        String userMovieName = input.getString("Enter a movie name.");
+        String userMovieCategory = input.getString("Is the movie animated, drama, horror, musical or scifi?");
+        userMovieCategory = userMovieCategory.toLowerCase();
 
+        Movie[] userMovieArray = Arrays.copyOf(movieList, movieList.length + 1);
+        userMovieArray[userMovieArray.length - 1] = new Movie(userMovieName, userMovieCategory);
+
+        System.out.println("Your movie has been added.");
+        return userMovieArray;
+    }
 
     private static String returnMenuDisplay() {
 

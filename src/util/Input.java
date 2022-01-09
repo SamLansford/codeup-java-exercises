@@ -3,64 +3,104 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+    private Scanner sc;
 
-    private static Scanner scanner;
-
+    //Has to be in a constructor method, Java rule. All functionality happens in the methods.
     public Input() {
-        scanner = new Scanner(System.in);
+        this.sc = new Scanner(System.in);
     }
 
-    public static String getString() {
-        return scanner.nextLine();
+    public String getString() {
+        return getString("Type out a sentence.");
     }
 
-    public int getInt() {
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return this.sc.nextLine();
+    }
 
-        try {
-            return Integer.parseInt(getString());
-        } catch (NumberFormatException e) {
-            System.out.printf("Input could not be parsed into an integer. %s\n", e.getMessage());
-            System.out.println("Try again");
-            return getInt();
+    public boolean yesNo() {
+        return yesNo("Yes or No?");
+    }
+
+
+    //Prompt Bonus
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String userString = this.sc.nextLine();
+        if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
         }
     }
 
     public int getInt(int min, int max) {
-        int userInput = getInt();
-        if (userInput >= min && userInput <= max) {
-            System.out.println("That's the right number");
-            return userInput;
-        } else {
-            System.out.println("Please enter a number between " + min + " and " + max);
+        System.out.printf("Give me a number between %d and %d\n", min, max);
+        int userInput = sc.nextInt();
+
+        if((userInput < min) || (userInput > max)) {
+            System.out.println("You did it wrong! Try again.");
+            return getInt(min, max);
         }
-        return getInt(min, max);
+        return userInput;
     }
 
-    public double getDouble() {
+    public int getInt() {
+        return getInt("Give me any number.");
+    }
 
+    //Prompt Bonus
+    public int getInt(String prompt) {
+        System.out.print(prompt);
         try {
-            return Double.parseDouble(getString());
-        } catch (NumberFormatException e) {
-            System.out.printf("Input could not parsed into an double. %s\n", e.getMessage());
-            System.out.println("Please try again");
-            return getDouble();
+            return Integer.valueOf(getString(" "));
+        } catch (Exception e) {
+            System.out.println("Invalid input, try again.");
+            return getInt(prompt);
         }
-
     }
 
     public double getDouble(double min, double max) {
-        double userInput = getDouble();
-        if (userInput >= min && userInput <= max) {
-            return userInput;
-        } else {
-            System.out.println("Please enter a decimal number between " + min + " and " + max);
+        System.out.printf("Give me a number between %f and %f\n", min, max);
+        double userInput = this.sc.nextDouble();
+        if((userInput < min) || (userInput > max)) {
+            System.err.println("You did it wrong! Try again.");
+            return getDouble(min, max);
         }
-        return getDouble(min, max);
+        return userInput;
     }
 
-    public boolean yesNo() {
-        System.out.println("Please type something");
-        String userInput = scanner.nextLine();
-        return (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y"));
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
+        try {
+            return Double.parseDouble(getString(" "));
+        } catch (Exception e) {
+            System.err.println("Invalid input, try again.");
+            return getDouble(prompt);
+        }
+    }
+
+    public double getDouble(){
+        return getDouble("Give me any number with a decimal.");
+    }
+
+    public int getBinary(){
+        try {
+            return Integer.parseInt(getString("Enter a binary number."), 2);
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid input, try again.");
+            return getBinary();
+        }
+    }
+
+
+    public int getHexDecimal(){
+        try {
+            return Integer.parseInt(getString("Enter a hexadecimal number."), 16);
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid input, try again.");
+            return getHexDecimal();
+        }
     }
 }
